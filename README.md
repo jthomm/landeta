@@ -12,7 +12,7 @@ python ~/Projects/Github/landeta-master/landeta.py -d mydatabase.sqlite3 -f game
 If the database `mydatabase.sqlite3` does not exist (or, more precisely, does not contain any objects), the script will create it for you and initialize all of the tables first.  It will then walk through the JSON object and insert the data.
 
 ### Bulk loading all the games
-If you have a lot of Game Center files in the current directory, one way to bulk load them quickly is to name them after the Game Center ID of the game (e.g. "2014092800.json") and then execute the following script:
+If you have a lot of Game Center files in the current directory, and each file is named after the Game Center ID of the game whose data it contains (e.g. "2014092800.json"), you can bulk load them quickly and efficiently using the following script:
 
 ```sh
 for g in $(ls *.json | cut -d '.' -f -1);
