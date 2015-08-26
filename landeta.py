@@ -329,7 +329,7 @@ def make_argument_parser():
     argument_parser.add_argument(
         '-f', '--filename', help='path to the Game Center .json file')
     argument_parser.add_argument(
-        '-g', '--gameid', help="Game Center ID of the game (e.g. '2014092800'")
+        '-g', '--gameid', help="Game Center ID of the game (e.g. '2014092800')")
     return argument_parser
 
 
