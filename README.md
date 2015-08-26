@@ -23,3 +23,5 @@ done
 
 ##Data model
 The "data model" mirrors the bananas structure of the Game Center JSON object: highly non-normalized and often repetitive.  This script does not attempt to deal with any of that that, preferring to extract and load the data as-is.  (The idea is that transformation and data quality can be done via a series of SQL statements once the data is in a RDMS.)
+
+![here it is](https://raw.githubusercontent.com/jthomm/landeta/master/gc.png)
