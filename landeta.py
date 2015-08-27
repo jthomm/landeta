@@ -274,7 +274,8 @@ class GcInserter(object):
             self.cursor,
             values.gc(self.game_id))
         gc_game_inserter = GcGameInserter(self.cursor, gc_id)
-        gc_game_inserter(self.game_id, dct['game'])
+        #gc_game_inserter(self.game_id, dct['game'])
+        gc_game_inserter(gc_id, dct['game'])
         gc_team_inserter = GcTeamInserter(self.cursor, gc_id)
         gc_team_inserter(dct['teams'])
         gc_cur_inserter = GcCurInserter(self.cursor, gc_id)
@@ -352,6 +353,8 @@ if __name__ == '__main__':
     # Enter a connection to the database
     with sqlite3.connect(args.database) as connection:
         cursor = connection.cursor()
+        # Make sure foreign key constraints are enforced
+        cursor.execute('PRAGMA foreign_keys = ON')
         # If tables aren't already there, create them
         if database_is_empty(cursor):
             print 'No objects found in database -- creating tables first...'
