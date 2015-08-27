@@ -2,7 +2,7 @@
 A SQLite database builder for NFL Game Center data
 
 ## Usage
-Assuming the Game Center JSON object for game `2014092800` is stored in the file `gamecenter.json` in the current directory:
+Assuming the Game Center JSON object for game [2014092800](http://www.nfl.com/gamecenter/2014092800/2014/REG4/panthers@ravens) is stored in the file `gamecenter.json` in the current directory:
 
 ```sh
 git clone https://github.com/jthomm/landeta.git ~/Projects/Github/landeta-master
